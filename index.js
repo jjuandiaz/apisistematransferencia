@@ -34,11 +34,13 @@ app.post('/transferencia',   (req, res) => {
     console.log(req.body);
     const transferencia = Transferencia(req.body);
     transferencia.save().then(() => {
-        res.json({
-            result: transferencia,
+     
+       res.json({
+            data: transferencia,
             error: false,
             message: "Fue insertado con exito",
-        });
+       });
+      
     }).catch(err  => {
         console.log(err);
         res.json({
