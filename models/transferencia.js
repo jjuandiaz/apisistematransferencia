@@ -21,11 +21,11 @@ const itemSchema = new Schema({
             type: String,
             required: true
         },
-        numeroCuenta: {
+        numero: {
             type: String,
             required: true
         },
-        tipoCuenta: {
+        tipo: {
             type: String,
             required: true
         },

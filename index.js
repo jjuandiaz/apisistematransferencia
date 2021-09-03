@@ -32,10 +32,10 @@ app.get('/banks', auth, (req, res) => {
 app.post('/transferencia',   (req, res) => {
     console.log("items");
     console.log(req.body);
-    const destinatario = Transferencia(req.body);
-    destinatario.save().then(() => {
+    const transferencia = Transferencia(req.body);
+    transferencia.save().then(() => {
         res.json({
-            result: destinatario,
+            result: transferencia,
             error: false,
             message: "Fue insertado con exito",
         });
